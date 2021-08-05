@@ -1,0 +1,5 @@
+class for all the different static list.
+Keep items and probilities together?
+lvl -> standard treaure generator.
+probability tables
+gold generation.
