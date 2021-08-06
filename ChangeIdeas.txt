@@ -3,3 +3,6 @@ Keep items and probilities together?
 lvl -> standard treaure generator.
 probability tables
 gold generation.
+
+Main treaure class containing the final result. 
+Build up the object, then print the final result.
