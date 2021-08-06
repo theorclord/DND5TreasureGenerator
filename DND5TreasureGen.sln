@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DND5TreasureGen", "DND5TreasureGen\DND5TreasureGen.csproj", "{30C4A9CD-76CE-437B-B440-7AFBB109C101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratorCore", "GeneratorCore\GeneratorCore.csproj", "{ABE68921-21DA-4A68-96C4-375CBD3473A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{30C4A9CD-76CE-437B-B440-7AFBB109C101}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30C4A9CD-76CE-437B-B440-7AFBB109C101}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30C4A9CD-76CE-437B-B440-7AFBB109C101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABE68921-21DA-4A68-96C4-375CBD3473A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABE68921-21DA-4A68-96C4-375CBD3473A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABE68921-21DA-4A68-96C4-375CBD3473A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABE68921-21DA-4A68-96C4-375CBD3473A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBBECAA4-00C5-4AEE-B903-378B72173E1E}
 	EndGlobalSection
 EndGlobal

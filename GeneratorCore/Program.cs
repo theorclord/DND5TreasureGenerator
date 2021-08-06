@@ -1,12 +1,8 @@
-﻿using DND5TreasureGen.Containers;
-using DND5TreasureGen.Helper;
+﻿using GeneratorCore.Containers;
+using GeneratorCore.Helper;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DND5TreasureGen
+namespace GeneratorCore
 {
     class Program
     {
@@ -37,7 +33,7 @@ namespace DND5TreasureGen
                         treasure.CoinContainer = tempCoin ?? new CoinContainer();
 
                         ProbabilityTables.EncounterMundaneRandom.TryGetValue(lvl, out Dice tempMund);
-                        treasure.MundaneAmount = tempMund ?? new Dice(0,0);
+                        treasure.MundaneAmount = tempMund ?? new Dice(0, 0);
                     }
                     else
                     {
@@ -55,12 +51,13 @@ namespace DND5TreasureGen
                 {
                     string[] parts = entry.Split(' ');
 
-                    if(parts.Length > 1 && int.TryParse(parts[1], out int lvl))
+                    if (parts.Length > 1 && int.TryParse(parts[1], out int lvl))
                     {
                         CoinContainer tempCoin;
                         ProbabilityTables.EncounterGoldRandom.TryGetValue(lvl, out tempCoin);
                         treasure.CoinContainer = tempCoin ?? new CoinContainer();
-                    } else
+                    }
+                    else
                     {
                         // todo remove this
                         treasure.CoinContainer = new CoinContainer()

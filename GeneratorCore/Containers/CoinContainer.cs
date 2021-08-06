@@ -1,11 +1,11 @@
-﻿using DND5TreasureGen.Helper;
+﻿using GeneratorCore.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DND5TreasureGen.Containers
+namespace GeneratorCore.Containers
 {
     public class CoinContainer
     {
