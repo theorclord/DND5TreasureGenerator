@@ -6,3 +6,17 @@ gold generation.
 
 Main treaure class containing the final result. 
 Build up the object, then print the final result.
+
+use linked items.
+	- if a crossbow drops, drop bolts
+	- probability for relation.
+	- item sets
+
+Item class. composite design pattern for weapons and more.
+
+All items are loaded in static class.
+How to relate? 
+	enum?
+	relations?
+	id?
+Crossbow -> itemId(Bolts)

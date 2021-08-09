@@ -27,7 +27,14 @@ namespace DND5TreasureGen
                 }
 
                 // generate a level item list
-                if (entry.Contains("lvl"))
+                if (entry.Contains("rel"))
+                {
+                    string[] parts = entry.Split(' ');
+                    treasure.GenerateRelatedItems(1);
+                    Console.WriteLine("Found: " + string.Join(";", treasure.Items));
+                    
+                }
+                else if (entry.Contains("lvl"))
                 {
                     string[] parts = entry.Split(' ');
 

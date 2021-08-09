@@ -47,6 +47,7 @@
     <Compile Include="Containers\CoinContainer.cs" />
     <Compile Include="Containers\Treasure.cs" />
     <Compile Include="Helper\Dice.cs" />
+    <Compile Include="Items\Item.cs" />
     <Compile Include="ProbabilityTables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

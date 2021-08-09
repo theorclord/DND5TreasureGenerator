@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DND5TreasureGen.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,24 @@ namespace DND5TreasureGen
         {
             Armor, Weapon, Gear, Ammo
         }
+
+        public enum Equipment
+        {
+            Crossbow, Bolts
+        }
+
+        //Item version 
+        public static Dictionary<Equipment,Item> RangedWeapons = new Dictionary<Equipment, Item>()
+        {
+            {Equipment.Crossbow, new Item(){Name = "Crossbow", RelatedItems = new List<Equipment>(){ Equipment.Bolts } } },
+
+        };
+        public static Dictionary<Equipment, Item> Ammo = new Dictionary<Equipment, Item>()
+        {
+            {Equipment.Bolts, new Item(){Name = "Bolts", RelatedItems = new List<Equipment>(){ Equipment.Crossbow } } },
+
+        };
+
         //Armor section
         public static readonly List<string> LightArmor = new List<string>()
         {
@@ -92,6 +111,29 @@ namespace DND5TreasureGen
                 }
                 
                 return _allItems;
+            }
+        }
+
+        private Dictionary<Equipment, Item> _allCombinedItems;
+
+        public Dictionary<Equipment, Item> AllCombinedItems
+        {
+            get
+            {
+                if (_allCombinedItems == null)
+                {
+                    _allCombinedItems = new Dictionary<Equipment, Item>();
+                    foreach(var pair in RangedWeapons)
+                    {
+                        _allCombinedItems.Add(pair.Key,pair.Value);
+                    }
+                    foreach (var pair in Ammo)
+                    {
+                        _allCombinedItems.Add(pair.Key, pair.Value);
+                    }
+                }
+
+                return _allCombinedItems;
             }
         }
 
